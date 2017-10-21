@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gorge", "gorge\gorge.csproj", "{B913C861-CFE3-48C3-9DF9-BE83CB57B20E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sim1", "Sim1\Sim1.csproj", "{70B05F4B-7B99-4B38-8D7F-36F6758CCCB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "temperatura", "temperatura\temperatura.csproj", "{6D868EBF-4CF4-4BC5-8E8E-6080E019C929}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B913C861-CFE3-48C3-9DF9-BE83CB57B20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B913C861-CFE3-48C3-9DF9-BE83CB57B20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B913C861-CFE3-48C3-9DF9-BE83CB57B20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B913C861-CFE3-48C3-9DF9-BE83CB57B20E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70B05F4B-7B99-4B38-8D7F-36F6758CCCB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B05F4B-7B99-4B38-8D7F-36F6758CCCB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B05F4B-7B99-4B38-8D7F-36F6758CCCB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B05F4B-7B99-4B38-8D7F-36F6758CCCB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D868EBF-4CF4-4BC5-8E8E-6080E019C929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D868EBF-4CF4-4BC5-8E8E-6080E019C929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D868EBF-4CF4-4BC5-8E8E-6080E019C929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D868EBF-4CF4-4BC5-8E8E-6080E019C929}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
