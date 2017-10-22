@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace gorge
+namespace ResourceWPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,18 +25,10 @@ namespace gorge
             InitializeComponent();
         }
 
-        private void guzik_Click(object sender, RoutedEventArgs e)
+        private void Zmiana_Click(object sender, RoutedEventArgs e)
         {
-
-            if (opis.Text == "")
-            {
-                opis.Text = " Eric Arthur Blair(25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.His work is marked by lucid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism.";
-
-            }
-            else
-            {
-                opis.Text = "";
-            }
+            (this.Resources["valueContent"] as ValueContent).color = Brushes.RoyalBlue;
+             //jezeli umiescimy zmiany dla calego projektu i umiescimy je w app.xaml to zamias "this.Resources" wpisujemy "Application.Current.Resources"
         }
     }
 }

@@ -1,0 +1,20 @@
+﻿<Window x:Class="ResourceWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourceWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <local:ValueContent x:Key="valueContent"   Vi="Visible"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel><!--DataContext="{StaticResource valueContent}"--><!--zakomenkotowana czesc moze zastopic source w miejscu uzycia-->
+            <Button x:Name="Zmiana" Width="100" Content="Klikaj" Click="Zmiana_Click"/>
+            <Rectangle Width="100" Height="100" Fill="{Binding color, Source={StaticResource valueContent}}" Visibility="{Binding Path=Vi, Source={StaticResource valueContent}}"></Rectangle>
+        </StackPanel>
+    </Grid>
+</Window>
+ 

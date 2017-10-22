@@ -4,6 +4,32 @@
              xmlns:local="clr-namespace:gorge"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="Background" Value="Green"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+            
+        <Style TargetType="{x:Type StackPanel}" >
+            <Setter Property="Background" Value="Blue"/>
+        </Style>
+        <Style TargetType="{x:Type StackPanel}" x:Key="opisOrwela">
+            <Setter Property="Background" Value="Red"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontWeight="Bold"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

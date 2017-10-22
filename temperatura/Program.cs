@@ -12,7 +12,7 @@ namespace temperatura
         {
             ServerTemperatureWatcher serverTemperatureWatcher = new ServerTemperatureWatcher();
             Admin admin = new Admin();
-            Boss boss = new Boss();
+           // Boss boss = new Boss();
 
             serverTemperatureWatcher.testTemperatury();
 

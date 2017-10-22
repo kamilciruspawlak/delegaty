@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gorge"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="400">
+        Title="MainWindow" Height="450" Width="450">
   <Grid>
         <Grid.RowDefinitions  >
             <RowDefinition  MinHeight="70" Height="70" ></RowDefinition>
@@ -13,10 +13,12 @@
             <RowDefinition MinHeight="100" Height="100"></RowDefinition>
         </Grid.RowDefinitions>
       
-        <Button x:Name="guzik" Margin="20" Height="30" FontWeight="Bold" FontSize="13" OpacityMask="#FFCFCF20" Background="#FFFEE3C5" BorderBrush="Black" BorderThickness="15" Click="guzik_Click" >Top Trumps Authors ==> GEORGE ORWELL</Button>
+        <ToggleButton x:Name="guzik" IsChecked="{Binding ElementName=zdjecie, Path=IsOpen}" Margin="20,20,81,20" Height="30" FontWeight="Bold" FontSize="13" OpacityMask="#FFCFCF20" Background="#FFFEE3C5" BorderBrush="Black" BorderThickness="15" Click="guzik_Click" >Top Trumps Authors ==> GEORGE ORWELL</ToggleButton>
+        <CheckBox x:Name="checking" RenderTransformOrigin="0.88,0.527" Margin="366,27,-24,20">Edycja</CheckBox>
+        <Popup x:Name="zdjecie" AllowsTransparency="True" PopupAnimation="Slide" PlacementTarget="{Binding ElementName=guzik}"  >
             <Grid Grid.Row="1" Margin="20" >
                 <Border BorderThickness="2" BorderBrush="Black">
-                <Grid >
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
@@ -28,14 +30,19 @@
                     </Border>
                     <StackPanel VerticalAlignment="Stretch" Grid.Column="1" Margin="20" >
                         <Label > Writin gstyle - 7</Label>
-                        <Label  >Characterisation - 9</Label>
-                        <Label  >Influance - 10</Label>
-                        <Label  >Readbility - 8</Label>
+                        <Label >Characterisation - 9</Label>
+                        <Label >Influance - 10</Label>
+                        <Label >Readbility - 8"</Label>
                     </StackPanel>
                 </Grid>
                 </Border>
             </Grid>
-        <TextBox x:Name="opis" Grid.Row="2" Margin="20,20" TextWrapping="Wrap" FontWeight="Bold" BorderThickness="0" TextAlignment="Center"/>
-
+        </Popup>
+        <StackPanel Grid.Row="2" Style="{StaticResource opisOrwela}">
+            <Border BorderThickness="1" BorderBrush="red">
+                <TextBox  x:Name="edycja" IsEnabled="{Binding IsChecked,ElementName=checking}" Height="20"></TextBox>
+            </Border>
+            <TextBlock x:Name="opis"  Margin="20,20" TextWrapping="Wrap" FontWeight="Bold"  TextAlignment="Center" >" Eric Arthur Blair(25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.His work is marked by lucid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism."</TextBlock>
+        </StackPanel>
     </Grid>
 </Window>
